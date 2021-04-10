@@ -91,7 +91,7 @@ RUN git clone https://github.com/civicrm/civicrm-buildkit.git buildkit-tmp
 
 RUN mv buildkit-tmp/* buildkit-tmp/.git* .
 
-RUN rmdir buildkit-tmp
+# RUN rmdir --help buildkit-tmp
 
 # Need to create this before we configure apache, otherwise it will complain
 RUN mkdir -p .amp/apache.d
