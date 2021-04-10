@@ -19,6 +19,7 @@ services:
     image: registry.access.redhat.com/rhscl/mysql-57-rhel7:latest
     environment:
       MYSQL_ROOT_PASSWORD: dummypassword
+      MYSQL_LOWER_CASE_TABLE_NAMES: 1
     volumes:
       - ./vol-mysql-data:/var/lib/mysql/data
     restart: unless-stopped
